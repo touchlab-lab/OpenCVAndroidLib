@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:rsb="http://schemas.android.com/apk/res-auto">
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/color_blob_detection_activity_surface_view" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Switch
+            android:id="@+id/showFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Filter" />
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMinValue="0"
+            rsb:absoluteMaxValue="359"
+            android:id="@+id/rsbHue"/>
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMinValue="0"
+            rsb:absoluteMaxValue="255"
+            android:id="@+id/rsbSat"/>
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMinValue="0"
+            rsb:absoluteMaxValue="255"
+            android:id="@+id/rsbVal"/>
+
+    </LinearLayout>
+</RelativeLayout>
